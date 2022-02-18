@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Footer.module.scss'
-import iovLogo from '../../public/images/logos/iov_light.svg';
-import {route} from "next/dist/server/router";
 import {useRouter} from "next/router";
 
 const Footer = () =>
@@ -16,8 +14,8 @@ const Footer = () =>
 					<div className="row">
 						<div className="col-md-3">
 							<div className="text-center">
-								<Image src={iovLogo} width={60} height={60}
-								       alt={"IOV Logo"} />
+								{/*<Image src={iovLogo} width={60} height={60}*/}
+								{/*       alt={"IOV Logo"} />*/}
 								<p className="text-light text-sm mt-4">Enter a new dimension</p>
 							</div>
 						</div>

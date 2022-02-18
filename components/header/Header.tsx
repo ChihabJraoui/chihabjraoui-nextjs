@@ -1,6 +1,5 @@
 import React, {Component} from "react"
 import Link from "next/link"
-import logoImage from "../../public/images/logos/iov_light.svg"
 import Image from "next/image"
 import styles from "./Header.module.scss"
 import HeaderMobile from "./header-mobile/header-mobile";
@@ -24,8 +23,8 @@ class Header extends Component<any, any>
 							<div className={styles.logo_container}>
 								<Link href={"/"}>
 									<a>
-										<Image src={logoImage} width={50} height={50}
-										       alt={"IOV Logo"} />
+										{/*<Image src={logoImage} width={50} height={50}*/}
+										{/*       alt={"IOV Logo"} />*/}
 									</a>
 								</Link>
 							</div>

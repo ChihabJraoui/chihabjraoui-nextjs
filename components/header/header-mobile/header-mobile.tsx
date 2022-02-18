@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './header-mobile.module.scss';
-import logoImage from "../../../public/images/logos/iov_light.svg"
 import {useState} from "react";
 
 const HeaderMobile = () =>
@@ -22,8 +21,8 @@ const HeaderMobile = () =>
 						<div className={styles.logo}>
 							<Link href={"/"}>
 								<a>
-									<Image src={logoImage} width={52} height={52}
-									       alt="IOV Logo" />
+									{/*<Image src={logoImage} width={52} height={52}*/}
+									{/*       alt="IOV Logo" />*/}
 								</a>
 							</Link>
 						</div>
