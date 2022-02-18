@@ -1,0 +1,52 @@
+@import "/styles/variables";
+
+.footer {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    background-color: $color-primary-900;
+}
+
+.appBottomFooter {
+    padding: 1rem 0;
+    background-color: $color-primary-900;
+
+    .languages {
+
+        a {
+            display: inline-block;
+            margin-right: 10px;
+            color: $gray-200;
+            font-weight: 300;
+        }
+    }
+
+    .copyrights {
+        text-align: center;
+
+        p {
+            margin-bottom: 0;
+            font-size: 0.8rem;
+            color: $gray-600;
+        }
+    }
+}
+
+.footer_links {
+    padding: 0 0 0 20px;
+    margin: 0;
+    list-style: none;
+
+    > li {
+        > a {
+            display: flex;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: $gray-400;
+
+            &:hover {
+                color: $color-accent-500
+            }
+        }
+    }
+}

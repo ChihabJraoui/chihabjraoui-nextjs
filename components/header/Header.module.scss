@@ -1,0 +1,186 @@
+@import "../styles/variables";
+
+// Header container
+.header_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: $color-primary-800;
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+//  . Logo
+// ----------
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.logo {
+    height: 50px !important;
+    width: auto;
+}
+
+/*  . Navigation
+ *------------------
+ */
+
+nav.navigation {
+    height: 100%;
+    display: flex;
+    margin-left: auto;
+}
+
+// Primary Menu Items
+//-----------------------
+
+ul.menuItems {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        position: relative;
+
+        &:hover .subMenu {
+            z-index: 1000;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+            transition: all .3s ease-in-out;
+        }
+
+        &.has_sub_menu {
+
+        }
+
+        > a {
+            display: flex;
+            align-items: center;
+            padding: .6rem 1rem;
+            cursor: pointer;
+            margin-right: .4rem;
+            border-radius: 1rem;
+
+            &:hover {
+                color: $white;
+                background-color: transparentize($color-accent-500, .8);
+            }
+
+            > span,
+            > i {
+                color: $gray-200;
+            }
+
+            > i {
+                margin-left: .4rem;
+                font-size: 12px;
+            }
+        }
+
+        .subMenu {
+            position: absolute;
+            z-index: -1000;
+            top: 100%;
+            left: 0;
+            width: 200px;
+            max-width: 300px;
+            padding: 10px;
+            visibility: hidden;
+            opacity: 0;
+            border-radius: .4rem;
+            background-color: $white;
+            transform: translateY(20px);
+
+            ul.sub_menu_items {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                > li {
+                    > a {
+                        display: flex;
+                        align-items: center;
+                        padding: 10px 20px;
+                        font-size: 14px;
+                        border-radius: 8px;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            color: $color-accent-800;
+                            background-color: $color-accent-200;
+                        }
+
+                        > i {
+                            margin-right: 10px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  . Secondary Menu Items
+//-------------------------
+
+ul.profileItems {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 60px;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        padding: 0;
+        margin-right: 16px;
+
+        > a {
+            display: flex;
+            padding: .6rem 1rem;
+            font-size: .8rem;
+            border-radius: .4rem;
+            transition: all .3s ease-in-out;
+
+            &.logIn {
+                color: $gray-200;
+
+                &:hover {
+                    background-color: transparentize($color-accent-500, .6);
+                }
+            }
+
+            &.signUp {
+                color: $gray-200;
+                background-color: $color-accent-500;
+                transition: all .4s ease-in-out;
+
+                &:hover {
+                    background-color: $color-accent-400;
+                }
+            }
+        }
+    }
+}
